@@ -52,8 +52,30 @@ a {
 
 /* Home section styles */
 #home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Adjust the height as needed */
+  background: url('./assets/banner.jpg') center/cover no-repeat; /* Replace './banner.jpg' with the actual path to your banner image */
+}
+
+.welcome {
   text-align: center;
-  padding: 50px 0;
+  color: #fff; /* Adjust the text color as needed */
+}
+
+.banner,
+.welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner img {
@@ -61,19 +83,16 @@ a {
   height: auto;
 }
 
-.welcome {
-  margin-top: 20px;
-}
-
 .button {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #b63232;
-  color: #fff;
+  background-color: #fff; /* Adjust the button background color as needed */
+  color: #333; /* Adjust the button text color as needed */
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Adjust the margin as needed */
 }
 
 /* About section styles */
