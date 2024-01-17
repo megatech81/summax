@@ -1,0 +1,236 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slogan h1 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Home section styles */
+#home {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #b63232;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* About section styles */
+#about {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team,
+.mission {
+  margin-top: 30px;
+}
+
+/* Services section styles */
+.section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.w-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #333;
+    margin: 20px auto;
+}
+
+.service-wrapper {
+    margin-bottom: 30px;
+}
+
+.service-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-info {
+    margin-top: 15px;
+}
+
+.service-title {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Work section styles */
+#work {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.project {
+  margin-top: 30px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Blog section styles */
+#blog {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Additional Styles for Contact and Footer Sections */
+
+.contact {
+    background-color: #b15c5c;
+    padding: 80px 0;
+}
+
+/* Additional Styles for Footer Section */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: #fff;
+    color: #333;
+}
+
+.success-message,
+.w-form-fail {
+    display: none;
+    margin-top: 20px;
+}
+
+.success-message h1,
+.w-form-fail p {
+    color: #fff;
+}
+
+.footer-logo {
+    margin-top: 30px;
+}
+
+.footer-text {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
