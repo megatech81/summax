@@ -1,6 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Smooth scrolling for navigation links
-  const navLinks = document.querySelectorAll('nav a');
+  // Off-Canvas Menu Scripts
+  function openNav() {
+    document.getElementById("offCanvasMenu").style.width = "250px";
+	document.body.classList.add('menu-open');
+  }
+
+  function closeNav() {
+    document.getElementById("offCanvasMenu").style.width = "0";
+	document.body.classList.remove('menu-open');
+  }
+
+  // Attach openNav to your menu button
+  document.querySelector('.topnav span').addEventListener('click', openNav);
+
+  // Close button inside off-canvas
+  document.querySelector('.off-canvas .closebtn').addEventListener('click', closeNav);
+
+  // Smooth scrolling for navigation links - This part might not work as expected because you do not have <nav> element
+  // If you do have a <nav>, replace '.topnav a' with 'nav a' and adjust accordingly
+  const navLinks = document.querySelectorAll('.topnav a');
+  const navHeight = document.querySelector('.topnav').offsetHeight;
 
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -11,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 50,
+          top: targetElement.offsetTop - navHeight, // Adjust for nav height
           behavior: 'smooth'
         });
       }
     });
   });
 
- // "Read more / Show less" functionality
+  // "Read more / Show less" functionality
   const welcomeText = document.querySelector('.welcome h2');
   const readMoreLink = document.querySelector('.read-more-link');
   const hiddenParagraphs = document.querySelectorAll('.welcome .hidden');
@@ -28,23 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
       paragraph.classList.toggle('hidden');
     });
 
-    if (welcomeText.classList.contains('expanded')) {
-      welcomeText.classList.remove('expanded');
-      readMoreLink.textContent = 'Read more';
-    } else {
-      welcomeText.classList.add('expanded');
+    if (readMoreLink.textContent.includes('Read more')) {
       readMoreLink.textContent = 'Show less';
-    }
-  });
-
-  // Move "Read more" link to the left after completing the last paragraph
-  const lastParagraph = document.querySelector('.welcome p:last-child');
-
-  readMoreLink.addEventListener('transitionend', function () {
-    if (!hiddenParagraphs[0].classList.contains('hidden')) {
-      readMoreLink.style.marginLeft = '0';
     } else {
-      readMoreLink.style.marginLeft = 'auto';
+      readMoreLink.textContent = 'Read more';
     }
   });
 
@@ -66,12 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      // Other validations...
+      // Assume other validations are passed...
 
-      // AJAX request
+      // AJAX request - This will not work as you do not have access to the server-side route '/send-email'
+      // and you have no internet access in this environment. This code should work in your actual environment where
+      // the server-side code exists.
       $.ajax({
         type: 'POST',
-        url: '/send-email', // Server-side route
+        url: '/send-email',
         data: {
           name: nameInput.value.trim(),
           email: emailInput.value.trim(),
@@ -80,10 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         success: function (response) {
           if (response.success) {
-            // Show success message or redirect user
             document.querySelector('.success-message').style.display = 'block';
           } else {
-            // Show error message
             alert('Error sending email. Please try again.');
           }
         },

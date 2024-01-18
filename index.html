@@ -17,17 +17,23 @@
   <div class="slogan">
     <h1>Your Partner in Software Excellence...!</h1>
   </div>
-</header>  
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#work">Our Work</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </nav>
+  <div id="offCanvasMenu" class="off-canvas">
+  <!-- Add menu items here -->
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <!-- ... other links ... -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+</div>
+<div class="topnav">
+  <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#work">Our Work</a>
+  <a href="#blog">Blog</a>
+  <a href="#footer" class="split">Contact Us</a>
+</div>
   <section id="home">
     <div class="banner"></div>
     <div class="welcome">
@@ -135,6 +141,7 @@
     </div>
     <a href="#contact" class="button">Discuss your project with us</a>
   </section>
+  
   <section id="blog">
     <h2>Blog</h2>
     <p>Read our latest articles and updates:</p>
