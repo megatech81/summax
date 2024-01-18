@@ -1,9 +1,9 @@
- // Smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+  // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll('nav a');
 
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', function(e) {
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
       e.preventDefault();
 
       const targetId = this.getAttribute('href').substring(1);
@@ -17,10 +17,38 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-});
 
-// Form validation for the contact form
-document.addEventListener('DOMContentLoaded', function () {
+ // "Read more / Show less" functionality
+  const welcomeText = document.querySelector('.welcome h2');
+  const readMoreLink = document.querySelector('.read-more-link');
+  const hiddenParagraphs = document.querySelectorAll('.welcome .hidden');
+
+  readMoreLink.addEventListener('click', function () {
+    hiddenParagraphs.forEach(paragraph => {
+      paragraph.classList.toggle('hidden');
+    });
+
+    if (welcomeText.classList.contains('expanded')) {
+      welcomeText.classList.remove('expanded');
+      readMoreLink.textContent = 'Read more';
+    } else {
+      welcomeText.classList.add('expanded');
+      readMoreLink.textContent = 'Show less';
+    }
+  });
+
+  // Move "Read more" link to the left after completing the last paragraph
+  const lastParagraph = document.querySelector('.welcome p:last-child');
+
+  readMoreLink.addEventListener('transitionend', function () {
+    if (!hiddenParagraphs[0].classList.contains('hidden')) {
+      readMoreLink.style.marginLeft = '0';
+    } else {
+      readMoreLink.style.marginLeft = 'auto';
+    }
+  });
+
+  // Form validation for the contact form
   const emailForm = document.getElementById('email-form');
 
   if (emailForm) {
