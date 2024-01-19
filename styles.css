@@ -90,8 +90,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  justify-content: flex-start; /* Align items to the start */
 }
-
+.topnav .logo {
+  flex-grow: 1; /* Allows the logo to take up available space */
+  text-align: center; /* Centers the logo */
+}
 .topnav a, .topnav span {
   color: #f8f8f8; /* Off-White for topnav text */
   padding: 14px 16px;
