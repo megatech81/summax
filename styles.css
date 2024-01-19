@@ -390,47 +390,59 @@ footer {
   }
 
   .topnav {
-    justify-content: space-between; /* Adjusts the space between menu and logo */
+    justify-content: space-between; /* Ensures spacing between menu icon and logo */
+    align-items: center; /* Centers items vertically */
+    padding: 10px; /* Provides padding around the navigation bar */
   }
 
   .topnav .logo {
-    flex-grow: 1; /* Allows the logo container to take up available space */
-    text-align: center; /* Centers the logo container */
+    flex: 0 1 auto; /* Prevents the logo from growing and sets it to content width */
+    text-align: center; /* Centers the logo horizontally if there is extra space */
   }
 
   .topnav .logo img {
-    max-width: 100px; /* Adjust the logo size as necessary */
+    max-width: 100px; /* Sets a maximum width for the logo */
     height: auto; /* Maintains the aspect ratio of the logo */
+    margin: 0 auto; /* Centers the logo within the flex item */
   }
 
   .topnav span {
-    font-size: 30px; /* Adjust the size of the hamburger icon */
-    padding: 10px;
+    font-size: 30px; /* Sets the size of the hamburger icon */
+    padding: 10px; /* Adds padding for easier touch */
+    display: block; /* Ensures the menu icon is displayed */
   }
 
-  .topnav a, .topnav span {
-    font-size: 14px; /* Smaller font size for nav items */
-    padding: 10px; /* Less padding for nav items */
+  .topnav a {
+    font-size: 14px; /* Sets a smaller font size for nav items */
+    padding: 10px 5px; /* Reduces padding for nav items */
+    display: none; /* Optionally hide text links when the menu icon is displayed */
+  }
+
+  .topnav a.split {
+    display: block; /* Keeps important action items like 'Contact Us' visible */
+    background-color: #ff704d; /* Restores the button color */
+    color: #f8f8f8; /* Restores the button text color */
+    margin-left: 10px; /* Adds margin to separate it from other nav items */
   }
 
   .service-title, .project-title, .read-more-link, .button, .form-label, .footer-text {
-    font-size: smaller;
+    font-size: smaller; /* Adjusts the font size to be smaller on mobile */
   }
 
   .welcome p, .team p, .mission p, .service-info div, .project-info div {
-    font-size: smaller;
+    font-size: smaller; /* Adjusts the font size for paragraph elements */
   }
 
   .read-more, .welcome, .service-info, .project-info, .contact-text {
-    padding: 10px;
+    padding: 10px; /* Adds padding to these elements */
   }
 
   .button, .form-input, .submit-button {
-    width: 100%;
-    box-sizing: border-box;
+    width: 100%; /* Makes these elements full width */
+    box-sizing: border-box; /* Adjusts box-sizing to include padding and borders */
   }
 
   .off-canvas a {
-    font-size: 20px; /* Adjust menu link size for better touch */
+    font-size: 20px; /* Adjusts the font size for better touch on off-canvas links */
   }
 }
