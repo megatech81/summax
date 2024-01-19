@@ -366,3 +366,62 @@ footer {
   text-align: center;
   border-top: 5px solid #ff704d; /* Coral border at the top */
  }
+ /* Tablet devices (portrait and landscape) - From 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header, .topnav, .w-container, .section {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  .topnav a, .topnav span {
+      font-size: 15px;
+  }
+  .slogan h1, .welcome h2, .service-title, .project-title {
+      font-size: 1.2rem;
+  }
+  .service-wrapper img, .project-wrapper img {
+      width: 100%;
+  }
+}
+
+/* Mobile devices - Up to 767px */
+@media screen and (max-width: 767px) {
+  .off-canvas {
+      width: 100%;
+      padding-top: 20px;
+  }
+
+  .topnav, .topnav .logo img {
+      display: none;
+  }
+
+  .welcome, .service-info, .project-info {
+      padding: 15px;
+  }
+
+  .welcome h2, .service-title, .project-title {
+      font-size: 1rem;
+  }
+
+  header, .w-container, .section {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .service-wrapper img, .project-wrapper img {
+      width: 100%;
+  }
+
+  .form-group {
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .form-input, .button, .submit-button {
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  #home {
+      height: auto;
+  }
+}
