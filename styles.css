@@ -389,12 +389,31 @@ footer {
     padding: 0 15px;
   }
 
-  .topnav .logo img, .service-wrapper img, .project-wrapper img, .team img, .mission img {
-    flex-grow: 1; /* Allows the logo to take up available space */
-    text-align: center; /* Centers the logo */
+  .topnav {
+    justify-content: space-between; /* Adjusts the space between menu and logo */
   }
 
-  .topnav span, .service-title, .project-title, .read-more-link, .button, .form-label, .footer-text {
+  .topnav .logo {
+    flex-grow: 1; /* Allows the logo container to take up available space */
+    text-align: center; /* Centers the logo container */
+  }
+
+  .topnav .logo img {
+    max-width: 100px; /* Adjust the logo size as necessary */
+    height: auto; /* Maintains the aspect ratio of the logo */
+  }
+
+  .topnav span {
+    font-size: 30px; /* Adjust the size of the hamburger icon */
+    padding: 10px;
+  }
+
+  .topnav a, .topnav span {
+    font-size: 14px; /* Smaller font size for nav items */
+    padding: 10px; /* Less padding for nav items */
+  }
+
+  .service-title, .project-title, .read-more-link, .button, .form-label, .footer-text {
     font-size: smaller;
   }
 
@@ -409,11 +428,6 @@ footer {
   .button, .form-input, .submit-button {
     width: 100%;
     box-sizing: border-box;
-  }
-
-  .topnav, .topnav span, .topnav a {
-    font-size: 14px; /* Smaller font size for nav items */
-    padding: 10px; /* Less padding for nav items */
   }
 
   .off-canvas a {
