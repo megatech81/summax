@@ -420,16 +420,7 @@ footer {
     }
   
     .topnav a.split {
-      display: inline-block; /* Ensures the button is displayed */
-      padding: 8px 15px; /* Adjusts padding to fit the text */
-      margin: 0; /* Resets any margin */
-      font-size: 14px; /* Matches other nav items' font size */
-      background-color: #ff704d; /* Button background color */
-      color: #ffffff; /* Button text color */
-      border: none; /* Removes border if there is any */
-      border-radius: 4px; /* Softens the corners of the button */
-      text-transform: uppercase; /* Optional: styles the button text */
-      font-weight: bold; /* Optional: makes the button text bold */
+      display: none; /* Hides the 'Contact Us' button in the mobile view */
     }
   
     .service-title, .project-title, .read-more-link, .button, .form-label, .footer-text {
