@@ -388,9 +388,9 @@ footer {
   @media screen and (max-width: 767px) {
     /* Adjusts the padding for the sections to reduce the side border width */
     section {
-      padding: 20px 10px; /* Reduced side padding */
-      margin: 10px; /* Reduced margin to match the new padding */
-      border-width: 1px; /* Reduced border-width for a thinner border */
+      padding: 20px 10px; /* Adjust padding as necessary */
+      margin: 10px 0; /* Adjust top and bottom margin as necessary, remove side margins */
+      border: none; /* Removes borders from the sections */
     }
   
     .topnav {
