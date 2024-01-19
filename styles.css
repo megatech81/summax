@@ -385,43 +385,38 @@ footer {
 
 /* Mobile devices - Up to 767px */
 @media screen and (max-width: 767px) {
-  .off-canvas {
-      width: 100%;
-      padding-top: 20px;
+  header, .section, .w-container {
+    padding: 0 15px;
   }
 
-  .topnav, .topnav .logo img {
-      display: none;
+  .topnav .logo img, .service-wrapper img, .project-wrapper img, .team img, .mission img {
+    max-width: 100%;
+    height: auto;
   }
 
-  .welcome, .service-info, .project-info {
-      padding: 15px;
+  .topnav span, .service-title, .project-title, .read-more-link, .button, .form-label, .footer-text {
+    font-size: smaller;
   }
 
-  .welcome h2, .service-title, .project-title {
-      font-size: 1rem;
+  .welcome p, .team p, .mission p, .service-info div, .project-info div {
+    font-size: smaller;
   }
 
-  header, .w-container, .section {
-      padding-left: 10px;
-      padding-right: 10px;
+  .read-more, .welcome, .service-info, .project-info, .contact-text {
+    padding: 10px;
   }
 
-  .service-wrapper img, .project-wrapper img {
-      width: 100%;
+  .button, .form-input, .submit-button {
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .form-group {
-      width: 100%;
-      box-sizing: border-box;
+  .topnav, .topnav span, .topnav a {
+    font-size: 14px; /* Smaller font size for nav items */
+    padding: 10px; /* Less padding for nav items */
   }
 
-  .form-input, .button, .submit-button {
-      width: 100%;
-      box-sizing: border-box;
-  }
-
-  #home {
-      height: auto;
+  .off-canvas a {
+    font-size: 20px; /* Adjust menu link size for better touch */
   }
 }
