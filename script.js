@@ -1,43 +1,42 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Off-Canvas Menu Scripts
-  function openNav() {
-    document.getElementById("offCanvasMenu").style.width = "250px";
-	document.body.classList.add('menu-open');
-  }
+    // Off-Canvas Menu Scripts
+    function openNav() {
+        document.getElementById("offCanvasMenu").style.width = "250px";
+        document.body.classList.add('menu-open');
+    }
 
-  function closeNav() {
-    document.getElementById("offCanvasMenu").style.width = "0";
-	document.body.classList.remove('menu-open');
-  }
+    function closeNav() {
+        document.getElementById("offCanvasMenu").style.width = "0";
+        document.body.classList.remove('menu-open');
+    }
 
-  // Attach openNav to your menu button
-  document.querySelector('.topnav span').addEventListener('click', openNav);
+    // Attach openNav to your menu button
+    document.querySelector('.topnav span').addEventListener('click', openNav);
 
-  // Close button inside off-canvas
-  document.querySelector('.off-canvas .closebtn').addEventListener('click', closeNav);
+    // Close button inside off-canvas
+    document.querySelector('.off-canvas .closebtn').addEventListener('click', closeNav);
 
-  // Smooth scrolling for navigation links - This part might not work as expected because you do not have <nav> element
-  // If you do have a <nav>, replace '.topnav a' with 'nav a' and adjust accordingly
-  const navLinks = document.querySelectorAll('.topnav a');
-  const navHeight = document.querySelector('.topnav').offsetHeight;
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.topnav a');
+    const navHeight = document.querySelector('.topnav').offsetHeight;
 
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
 
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - navHeight, // Adjust for nav height
-          behavior: 'smooth'
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - navHeight,
+                    behavior: 'smooth'
+                });
+            }
         });
-      }
     });
-  });
 
-  // "Read more / Show less" functionality
+    // "Read more / Show less" functionality
   const welcomeText = document.querySelector('.welcome h2');
   const readMoreLink = document.querySelector('.read-more-link');
   const hiddenParagraphs = document.querySelectorAll('.welcome .hidden');
@@ -53,13 +52,14 @@ document.addEventListener('DOMContentLoaded', function () {
       readMoreLink.textContent = 'Read more';
     }
   });
+  
 
-  // Form validation for the contact form
-  const emailForm = document.getElementById('email-form');
+    // Form validation for the contact form
+    const emailForm = document.getElementById('email-form');
 
-  if (emailForm) {
-    emailForm.addEventListener('submit', function (e) {
-      e.preventDefault();
+    if (emailForm) {
+        emailForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
       const nameInput = document.getElementById('name');
       const emailInput = document.getElementById('email');
