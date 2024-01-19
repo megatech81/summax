@@ -390,8 +390,8 @@ footer {
   }
 
   .topnav .logo img, .service-wrapper img, .project-wrapper img, .team img, .mission img {
-    max-width: 100%;
-    height: auto;
+    flex-grow: 1; /* Allows the logo to take up available space */
+    text-align: center; /* Centers the logo */
   }
 
   .topnav span, .service-title, .project-title, .read-more-link, .button, .form-label, .footer-text {
